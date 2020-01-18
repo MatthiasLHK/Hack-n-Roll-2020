@@ -10,11 +10,13 @@ bot.get_updates(fail_silently: true) do |message|
 
 
   message.reply do |reply|
-    case command
+    case message.text
     when /start/i
       reply.text = "All I can do is say hello. try the /greet command."
     when /greet/i
       reply.text = "Hello, #{message.from.first_name}"
+    when /play/i
+      reply.text = "What is the captial of England?"
     else
       reply.text = "I have no idea what #{command.inspect} means."
     end 
