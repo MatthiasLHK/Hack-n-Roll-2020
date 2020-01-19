@@ -8,7 +8,7 @@ bot.listen do |message|
   when Telegram::Bot::Types::CallbackQuery
     # Here you can handle your callbacks from inline buttons
     if message.data == 'touch'
-      bot.api.send_message(chat_id: message.from.id, text: "/start")
+      bot.api.send_message(chat_id: message.from.id, text: "/pl")
     end
   when Telegram::Bot::Types::Message
     kb = [
